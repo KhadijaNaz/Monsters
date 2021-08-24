@@ -25,7 +25,10 @@ class App extends Component{
   }
 
   componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/users').then(response=> console.log(response));
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response=>response.json())
+    .then(user=>console.log(user))
+    .then(email=>console.log(email));
     
   }
   render(){
