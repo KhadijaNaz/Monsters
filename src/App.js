@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import React, {Component} from 'react';
 import { CardList } from './Component/CardList/CardList.Component'
-import { CardList2 } from './Component/CardList/cardlist2'
 import './App.css';
 import { react } from '@babel/types';
  
@@ -23,18 +22,9 @@ class App extends Component{
     return(
       <div className="App">
         <CardList name="Monster1">
-          <h1>Monsters Children1</h1>
-          <h1>Monsters Children1</h1>
-          <h1>Monsters Children1</h1>
-          <h1>Monsters Children1</h1>
+        {this.state.monsters.map(monster =>(<h1 key= { monster.id}> {monster.name}</h1>))}
         </CardList>
-        <CardList2 name="Monster2">
-          <h1>Monsters Children2</h1>
-          <h1>Monsters Children2</h1>
-          <h1>Monsters Children2</h1>
-          <h1>Monsters Children2</h1>
-        </CardList2>
-           {this.state.monsters.map(monster =>(<h1 key= { monster.id}> {monster.name}</h1>))}
+         
 
     </div>
     
